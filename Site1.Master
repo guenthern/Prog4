@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Prog3.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="Externals3.css">
+    <title> CS3870 - Prog4 </title>
+    <%--<p><a href ="Default.aspx"> All Products </a></p>
+    <p><a href ="Updating.aspx"> Updating Products </a></p>
+    <p><a href ="Shopping.aspx"> Shopping </a></p>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1><u> Web Protocolas, Technologis and Applications </u></h1>
+    <h2><i> Nikolai Guenther </i></h2>
+    <h2> Prog 4 </h2>
+    <form id="form1" runat="server">
+        <asp:TreeView ID="TreeView1" runat="server">
+            <Nodes>
+                <asp:TreeNode Text="All Products" Value="New Node" NavigateUrl="~/Default.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Update Products" Value="New Node" NavigateUrl="~/Updating.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Shopping" Value="New Node" NavigateUrl="~/Shopping.aspx"></asp:TreeNode>
+            </Nodes>
+        </asp:TreeView>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
